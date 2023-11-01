@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Grotesk";
+    background-color: hsl(0, 0%, 100%);
+}
+
+button {
+    font-family: "Space Grotesk";
+}
+
+input {
+    border-color: hsl(270, 3%, 87%);
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    width: 1440px;
+}
+
+.img-container {
+    background: url(/images/bg-main-desktop.png) no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 100vh;
+}
+
+.form-card-data {}
+
+/* front of card  */
+
+.img-front-card {
+    margin-top: 15rem;
+    right: 20rem;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 1.7rem;
+    left: 1.7rem;
+}
+
+.number-front-card {
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    font-weight: normal;
+    top: 9rem;
+    left: 1.3rem;
+}
+
+.name-card-front {
+    position: absolute;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    top: 12.5rem;
+    left: 1.3rem;
+}
+
+.vality-number-front-card {
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    left: 22rem;
+    top: 12.5rem;
+}
+
+.vality-card {
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    left: 24.2rem;
+    top: 12.5rem;
+}
+
+/* end of front of card */
+
+/* back of card */
+
+.img-back-card {
+    position: relative;
+}
+
+.card-back {
+    position: absolute;
+    top: 33rem;
+    right: 16rem;
+}
+
+.number-back-card {
+    position: absolute;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 2px;
+    top: 40rem;
+    right: 21rem;
+}
+
+/* end of back of card */
+
+/* form of card */
+
+.card-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-holder-name, .number-card, .due-date, .cvc-card {
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    margin: 0.7rem 0;
+    letter-spacing: 1px;
+}
+
+.name, .number {
+    width: 400px;
+    color: hsl(279, 6%, 55%);
+    border-radius: 10px;
+    font-weight: none;
+    font-size: 16px;
+    padding: 1rem;
+}
+
+
+.maturity {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.7rem;
+}
+
+
+.cvccode {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#error {
+    display: none;
+    margin: 0.5rem 0.4rem;
+    color: hsl(0, 100%, 66%);
+}
+
+
+.due-date {
+    display: block;
+}
+
+
+.month, .yeah {
+    color: hsl(279, 6%, 55%);
+    font-size: 16px;
+    border-radius: 10px;
+    width: 70px;
+    padding: 1rem 0rem;
+    text-align: center;
+    margin-right: 0.1rem;
+}
+
+.yeah {
+    margin-left: 1rem;
+}
+
+
+.card-code {
+    width: 170px;
+    font-size: 16px;
+    padding: 1rem;
+    border-radius: 10px;
+    color: hsl(279, 6%, 55%);
+}
+
+.confirm {
+
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 1.7rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    cursor: pointer;
+}
+
+/* confirm  */
+.complete {
+    display: none;
+    position: absolute;
+    text-align: center;
+    margin: 1rem;
+    padding-bottom: 1.7rem;
+    right: 35.2rem;
+}
+
+.img-complete {
+    margin-bottom: 1.7rem;
+}
+
+.end {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: hsl(278, 68%, 11%);
+    ;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: 2rem;
+    color: hsl(279, 6%, 55%);
+
+}
+
+.continue {
+    width: 410px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 1.7rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    cursor: pointer;
+}
+
+/* end of card */
+
+/* version mobile */
+
+@media screen and (max-width:1360px) {
+
+    .container>.img-container, .card-front, .card-back{
+        width: 300px;
+    }
+    .logo{
+        width: 60px;
+        top: auto;
+        position: fixed; 
+        margin: 7rem 0 0rem 8rem;
+    }
+
+    .card-front{
+        margin: 6rem 1rem 0 10rem;
+    }
+
+    .number-front-card, .name-card-front, .vality-number-front-card, .vality-card{
+        font-size: 18px;
+        position: fixed;
+    }
+
+    .number-front-card, .name-card-front{
+        margin: 17rem 0 0rem 8.5rem;
+    }
+
+    .vality-number-front-card, .vality-card{
+        margin: 17rem 0 0rem 0.4rem;
+        font-size: small;
+        
+    }
+
+    .name-card-front{
+        font-size: small;
+    }
+
+    .vality-card{
+        margin-left: 0.2rem
+    }
+}
+
+@media sreen and (max-width: 767px) {
+
+    .img-container {
+        background-image: url(/images/bg-main-mobile.png);
+    }
+}
