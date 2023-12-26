@@ -27,7 +27,7 @@ input {
 }
 
 .img-container {
-    background: url(/images/bg-main-desktop.png) no-repeat;
+    background: url(./images/bg-main-desktop.png) no-repeat;
     background-position: center center;
     background-size: cover;
     width: 30%;
