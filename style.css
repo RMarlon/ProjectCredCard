@@ -3,6 +3,7 @@
 * {
     margin: 0%;
     padding: 0%;
+    font-family: "Space Grotesk";
     box-sizing: border-box;
 }
 
@@ -21,18 +22,18 @@ input {
 
 .container {
     display: flex;
-    margin: auto;
-    width: 1440px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .img-container {
     background: url(/images/bg-main-desktop.png) no-repeat;
+    background-position: center center;
     background-size: cover;
-    width: 500px;
-    height: 100vh;
+    width: 30%;
+    min-height: 100vh;
+    position: relative;
 }
-
-.form-card-data {}
 
 /* front of card  */
 
@@ -245,50 +246,3 @@ input {
 /* end of card */
 
 /* version mobile */
-
-@media screen and (max-width:1360px) {
-
-    .container>.img-container, .card-front, .card-back{
-        width: 300px;
-    }
-    .logo{
-        width: 60px;
-        top: auto;
-        position: fixed; 
-        margin: 7rem 0 0rem 8rem;
-    }
-
-    .card-front{
-        margin: 6rem 1rem 0 10rem;
-    }
-
-    .number-front-card, .name-card-front, .vality-number-front-card, .vality-card{
-        font-size: 18px;
-        position: fixed;
-    }
-
-    .number-front-card, .name-card-front{
-        margin: 17rem 0 0rem 8.5rem;
-    }
-
-    .vality-number-front-card, .vality-card{
-        margin: 17rem 0 0rem 0.4rem;
-        font-size: small;
-        
-    }
-
-    .name-card-front{
-        font-size: small;
-    }
-
-    .vality-card{
-        margin-left: 0.2rem
-    }
-}
-
-@media sreen and (max-width: 767px) {
-
-    .img-container {
-        background-image: url(/images/bg-main-mobile.png);
-    }
-}
