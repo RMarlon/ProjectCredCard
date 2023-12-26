@@ -107,9 +107,7 @@ input {
 /* form of card */
 
 .card-data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 17rem;
 }
 
 .form-card-data {
