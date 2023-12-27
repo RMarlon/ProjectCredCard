@@ -244,3 +244,51 @@ input {
 /* end of card */
 
 /* version mobile */
+@media(max-width:1240px){
+
+    .logo{
+        width: 60px;
+        top: 1rem;
+        left: 1rem;
+    }
+    .img-container, .card-front, .card-back{
+        width: 300px;
+    }
+
+    .img-front-card{
+        right: 13rem;
+        margin-top: 20rem;
+    }
+
+    .number-front-card{
+        top: 5rem;
+        font-size: 20px;
+        left: 1.4rem;
+    }
+
+    .name-card-front{
+        top: 7.5rem;
+        left: 1.5rem;
+        font-size: 12px;
+    }
+
+    .vality-number-front-card{
+        left: 14rem;
+        top: 7.5rem;
+    }
+
+    .vality-card{
+        left: 16.2rem;
+        top: 7.5rem;
+    }
+
+    .card-back{
+        right: 9rem;
+        top: 31.2rem;
+    }
+
+    .number-back-card{
+        top: 35.6rem;
+        right: 12rem;
+    }
+}
