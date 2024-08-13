@@ -1,0 +1,27 @@
+0000 0000 0000 0000
+
+Jane Appleseed
+
+00 / 00
+
+000
+
+Cardholder Name
+
+Card Number
+
+Wrong format, numbers only
+
+Exp. Date (MM/YY)
+
+Can't be blank
+
+Can't be blank
+
+Confirm
+
+Thank you!
+
+We've added your card details
+
+Continue

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Interactive card details form</title>
@@ -25,78 +25,13 @@
 </head>
 
 <body>
-  <main class="container">
-    
-      <div class="img-container">
+  <section class="container">
+      <div class="container-left">
+        <div class="image-card-front">...</div>
+        <div class="image-card-back">...</div>
       </div>
-    
-    <div class="img-front-card">
-      <!-- front of card -->
-
-      <img class="logo" src="./images/card-logo.svg" alt="card-logo">
-      <img class="card-front" src="./images/bg-card-front.png" alt="card-front">
-
-      <h1 id="number-front-card" class="number-front-card">0000 0000 0000 0000</h1>
-      <span id="name-card-front" class="name-card-front">Jane Appleseed</span>
-      <span id="vality-number-front-card" class="vality-number-front-card">00 / </span>
-      <span class="vality-card" id="vality-card"> 00</span>
-
-      <!-- end of front of card -->
-
-    </div>
-
-    <div class="img-back-card">
-
-      <!-- back of card -->
-
-      <img class="card-back" src="./images/bg-card-back.png" alt="card-back">
-      <span id="number-back-card" class="number-back-card">000</span>
-
-      <!-- end of back of card -->
-
-    </div>
-
-    <div class="card-data">
-      <form id="form-card-data" class="form-card-data">
-
-        <label class="card-holder-name">Cardholder Name</label>
-        <input id="name" type="text" class="name" maxlength="13" placeholder="e.g. Jane Appleseed">
-        <label class="number-card">Card Number</label>
-        <input id="number" type="text" class="number" maxlength="19" minlength="19" oninput="valityNumber()"
-          placeholder="e.g. 1234 5678 9123 0000">
-        <small class="error" id="error">Wrong format, numbers only</small>
-
-        <div class="maturity">
-          <div class="monthAndYeah">
-            <label class="due-date">Exp. Date (MM/YY)</label>
-            <input id="month" class="month" maxlength="2" minlength="2" type="text" oninput="valityNumberMonth()"
-              placeholder=" MM">
-            <input id="yeah" type="text" class="yeah" maxlength="2" minlength="2" placeholder="YY">
-            <div>
-              <small id="error">Can't be blank</small>
-            </div>
-          </div>
-
-
-          <div class="cvccode">
-            <label class="cvc-card">CVC</label>
-            <input id="card-code" type="text" class="card-code" maxlength="3" minlength="3" oninput="cardCodeCvc()"
-              placeholder="e.g. 123">
-            <small id="error">Can't be blank</small>
-          </div>
-        </div>
-        <button id="confirm" class="confirm">Confirm</button>
-      </form> <!--form-card-data-->
-
-      <div class="complete" id="complete">
-        <img class="img-complete" src="./images/icon-complete.svg" alt="">
-        <h1 class="end">Thank you!</h1>
-        <span class="details">We've added your card details</span>
-        <button class="continue">Continue</button>
-      </div>
-    </div>
-
-  </main>
+      <div class="container-right"></div>
+  </section>
 
   <script src="/script.js"></script>
 </body>

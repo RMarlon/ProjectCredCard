@@ -3,362 +3,44 @@
 * {
     margin: 0%;
     padding: 0%;
-    font-family: "Space Grotesk";
+    list-style: none;
+    text-decoration: none;
     box-sizing: border-box;
 }
 
+:root {
+    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    /* -------------------------------------- */
+    --background-color: hsl(0, 0%, 100%);
+    --background-color-one: hsl(278, 94%, 30%);
+    --background-color-two: hsl(278, 68%, 11%);
+    /* -------------------------------------- */
+    --text-color: hsl(0, 0%, 100%);
+    --text-color-one: hsl(279, 6%, 55%);
+    --text-color-two: hsl(278, 68%, 11%);
+    /* -------------------------------------- */
+    --border-color: hsl(249, 99%, 64%);
+    --border-color-one: hsl(270, 3%, 87%);
+}
+
 body {
-    font-family: "Space Grotesk";
-    background-color: hsl(0, 0%, 100%);
-    height: 100vh;
-}
-
-button {
-    font-family: "Space Grotesk";
-}
-
-input {
-    border-color: hsl(270, 3%, 87%);
-}
-
-.container {
     display: flex;
-    overflow: hidden;
-}
-
-.img-container {
-    background: url(./images/bg-main-desktop.png) no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 30%;
-    min-height: 100vh;
-
-    position: relative;
-}
-
-/* front of card  */
-
-.img-front-card {
-    margin-top: 15rem;
-    right: 20rem;
-    position: relative;
-}
-
-.logo {
-    position: absolute;
-    top: 1.7rem;
-    left: 1.7rem;
-}
-
-.number-front-card {
-    position: absolute;
-    color: hsl(0, 0%, 100%);
-    font-weight: normal;
-    top: 9rem;
-    left: 1.3rem;
-}
-
-.name-card-front {
-    position: absolute;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: hsl(0, 0%, 100%);
-    top: 12.5rem;
-    left: 1.3rem;
-}
-
-.vality-number-front-card {
-    position: absolute;
-    color: hsl(0, 0%, 100%);
-    left: 22rem;
-    top: 12.5rem;
-}
-
-.vality-card {
-    position: absolute;
-    color: hsl(0, 0%, 100%);
-    left: 24.2rem;
-    top: 12.5rem;
-}
-
-/* end of front of card */
-
-/* back of card */
-
-.img-back-card {
-    position: relative;
-}
-
-.card-back {
-    position: absolute;
-    top: 33rem;
-    right: 16rem;
-}
-
-.number-back-card {
-    position: absolute;
-    color: hsl(0, 0%, 100%);
-    letter-spacing: 2px;
-    top: 40rem;
-    right: 21rem;
-}
-
-/* end of back of card */
-
-/* form of card */
-
-.card-data {
-    margin-top: 17rem;
-}
-
-.form-card-data {
-    display: flex;
-    flex-direction: column;
+    margin-top: 50px;
+    overflow-y: hidden;
     justify-content: center;
+    font-family: "Space Grotesk";
+    background-color: var(--background-color);
 }
 
-.card-holder-name, .number-card, .due-date, .cvc-card {
-    color: hsl(278, 68%, 11%);
-    text-transform: uppercase;
-    margin: 0.7rem 0;
-    letter-spacing: 1px;
+.container{
+    width: 1600px;
+    height: 800px;
+    border:2px solid red;
+    background: url(/images/bg-main-desktop.png)no-repeat;
 }
 
-.name, .number {
-    width: 400px;
-    color: hsl(279, 6%, 55%);
-    border-radius: 10px;
-    font-weight: none;
-    font-size: 16px;
-    padding: 1rem;
-}
-
-
-.maturity {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1.7rem;
-}
-
-
-.cvccode {
-    display: flex;
-    flex-direction: column;
-
-}
-
-#error {
-    display: none;
-    margin: 0.5rem 0.4rem;
-    color: hsl(0, 100%, 66%);
-}
-
-
-.due-date {
-    display: block;
-}
-
-
-.month, .yeah {
-    color: hsl(279, 6%, 55%);
-    font-size: 16px;
-    border-radius: 10px;
-    width: 70px;
-    padding: 1rem 0rem;
-    text-align: center;
-    margin-right: 0.1rem;
-}
-
-.yeah {
-    margin-left: 1rem;
-}
-
-
-.card-code {
-    width: 170px;
-    font-size: 16px;
-    padding: 1rem;
-    border-radius: 10px;
-    color: hsl(279, 6%, 55%);
-}
-
-.confirm {
-
-    font-weight: normal;
-    letter-spacing: 2px;
-    font-size: 18px;
-    margin-top: 1.7rem;
-    padding: 1rem;
-    border: none;
-    border-radius: 10px;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(278, 68%, 11%);
-    cursor: pointer;
-}
-
-/* confirm  */
-.complete {
-    display: none;
-    position: absolute;
-    text-align: center;
-    margin: 1rem;
-    padding-bottom: 1.7rem;
-    right: 35.2rem;
-}
-
-.img-complete {
-    margin-bottom: 1.7rem;
-}
-
-.end {
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: normal;
-    letter-spacing: 3px;
-    color: hsl(278, 68%, 11%);
-    ;
-}
-
-.details {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    margin: 2rem;
-    color: hsl(279, 6%, 55%);
-
-}
-
-.continue {
-    font-weight: normal;
-    letter-spacing: 2px;
-    font-size: 18px;
-    margin-top: 1.7rem;
-    padding: 1rem;
-    border: none;
-    border-radius: 10px;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(278, 68%, 11%);
-    cursor: pointer;
-}
-
-/* end of card */
-
-/* version mobile */
-@media(max-width:1024px) {
-
-    
-    .logo {
-        width: 60px;
-        top: 1rem;
-        left: 1rem;
-    }
-
-    .img-container {
-        min-height: 100vh;
-    }
-
-    .card-front, .card-back {
-        width: 300px;
-    }
-
-    .img-front-card {
-        right: 13rem;
-        top: 0rem;
-    }
-
-    .number-front-card {
-        top: 5rem;
-        font-size: 20px;
-        left: 1.4rem;
-    }
-
-    .name-card-front {
-        top: 7.5rem;
-        left: 1.5rem;
-        font-size: 12px;
-    }
-
-    .vality-number-front-card {
-        left: 14rem;
-        top: 7.5rem;
-    }
-
-    .vality-card {
-        left: 16.2rem;
-        top: 7.5rem;
-    }
-
-    .card-back {
-        right: 9rem;
-        top: 27rem;
-    }
-
-    .number-back-card {
-        top: 31.4rem;
-        right: 12rem;
-    }
-
-    .name, .number {
-        width: 350px;
-    }
-
-    .form-card-data {
-        padding-right: 50px;
-        padding-left: 0;
-    }
-
-    .card-data{
-        margin-top: 10rem;
-   
-    }
-    
-    .complete{
-        /* display: block; */
-        right: 2rem;
-        top: 17rem;
-    }
-
-    .continue{
-        width: 350px;
-    }
-}
-
-
-
-@media(max-width:768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .img-container{
-        background: url(/images/bg-main-mobile.png) no-repeat / cover;
-        min-height: 250px;
-    }
-
-    .img-front-card{
-        top: -22rem;
-        right: 5rem;
-        z-index: 1;
-    }
-
-    .img-back-card{
-        bottom: 65.2rem;
-        left: 18rem;
-    }
-
-    .card-data{
-        margin-top: -290px;
-        margin-bottom: 30px;
-    }
-
-    .complete{
-        /* display: block; */
-        right: 13.6rem;
-        top: 24rem;
-    }
-
-    .continue{
-        width: 350px;
-    }
+.image-card-front{
+    width: 100%;
+    height: 400px;
+    background: url(/images/bg-card-front.png)no-repeat;
 }
