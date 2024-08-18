@@ -33,13 +33,16 @@ body {
 }
 
 .container{
+    display: flex;
     width: 1600px;
     height: 800px;
+    align-items: center;
     border:2px solid red;
     background: url(/images/bg-main-desktop.png)no-repeat;
 }
 
 .container-left{
+    width: 100%;
     display: flex;
     margin-top: 5%;
     margin-left: 10%;
@@ -47,15 +50,66 @@ body {
 }
 
 .image-card-front{
-    flex: 300px;
-    width: 100%;
+    flex: 290px;
+    width: 500px;
     height: 400px;
     background: url(/images/bg-card-front.png)no-repeat;
 }
 
+.image-logo{
+    width: 90px;
+    height: 90px;
+    margin: 30px 20px;
+    background: url(/images/card-logo.svg)no-repeat;
+}
+
+
+.info--date{
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.vality--info{
+    display: flex;
+    font-size: 16px;
+    margin-right: 90px;
+    letter-spacing: 2px;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.number--card{
+    margin: 0 25px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+}
+
+.name--card{
+    font-size: 16px;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
 .image-card-back{
-    width: 100%;
+    flex: 290px;
+    width: 500px;
     height: 400px;
-    margin-left: 80px;
+    margin-left: 100px;
     background: url(/images/bg-card-back.png)no-repeat;
+}
+
+.info--cvc{
+    display: flex;
+    margin-right: 110px;
+    justify-content: end;
+}
+
+.number--cvc{
+    margin-top: 110px;
+    letter-spacing: 2px;
+    color: var(--text-color);
 }
