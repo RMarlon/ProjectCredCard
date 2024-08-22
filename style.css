@@ -41,7 +41,6 @@ input {
     width: 1600px;
     height: 800px;
     align-items: center;
-    border: 2px solid red;
     background: url(/images/bg-main-desktop.png)no-repeat;
 }
 
