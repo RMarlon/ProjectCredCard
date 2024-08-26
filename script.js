@@ -11,6 +11,10 @@ const monthCard = document.querySelector('.card--month', (element)=>{
     element.innerHTML = `${inputMonth}`;
 });
 
+const yearCard = document.querySelector('.card--year', (element)=>{
+    element.innerHTML = `${'inputYear'}`;
+});
+
 //eventos
 const inputName = document.querySelector('.name');
 inputName.addEventListener('input', (event)=>{
@@ -45,5 +49,21 @@ inputMonth.addEventListener('input', (event)=>{
 
     if(event.target.value === ''){
         monthCard.innerHTML = `${'00'}`;
+    }
+});
+
+const inputYear = document.querySelector('.year');
+inputYear.addEventListener('input', (event)=>{
+    yearCard.innerHTML = `${event.target.value}`;
+
+    if(event.target.value === ''){
+        yearCard.innerHTML = `${'00'}`;
+
+        errorElement.innerHTML = `${"Can't be blank"}`;
+        errorElement.style.display = `${'block'}`;
+        errorElement.style.marginTop = `${'10px'}`;
+        errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
+        inputYear.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
+        inputYear.after(errorElement);
     }
 });
