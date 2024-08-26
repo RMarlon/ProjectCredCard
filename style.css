@@ -21,6 +21,8 @@
     /* -------------------------------------- */
     --border-color: hsl(249, 99%, 64%);
     --border-color-one: hsl(270, 3%, 87%);
+
+    --error-color: hsl(0, 100%, 66%);
 }
 
 body {
@@ -144,7 +146,12 @@ input {
     letter-spacing: 1px;
     border-radius: 10px;
     color: var(--text-color-one);
+    transition: ease-in-out 0.3s;
     border: 1px solid var(--border-color-one);
+}
+
+.desc-input:hover{
+    border: 1px solid var(--border-color);
 }
 
 .info-month-year {
@@ -153,7 +160,7 @@ input {
     justify-content: space-between;
 }
 
-.month {
+.month, .year {
     width: 100px;
 }
 

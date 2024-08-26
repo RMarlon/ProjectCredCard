@@ -49,18 +49,21 @@
     <div class="container-right">
       <main class="right-container--main">
         <p class="full-name">Cardholder Name</p>
-        <input class="desc-input" type="text" placeholder="e.g. Jane Appleseed">
+        <input class="desc-input name" type="text" placeholder="e.g. Jane Appleseed" required minlength="3">
+
         <p class="full-number--card">Card Number</p>
-        <input class="desc-input number" type="text" placeholder="e.g. 1234567891230000">
+        <input class="desc-input number" type="text" placeholder="e.g. 1234567891230000" required maxlength="19">
         <div class="info-month-year">
           <div class="month-date">
             <p class="day-month">Exp. Date (MM/YY)</p>
-            <input class="desc-input month" type="text" placeholder="MM">
-            <input class="desc-input month" type="text" placeholder="YY">
+            <input class="desc-input month" type="text" placeholder="MM" required minlength="2" maxlength="2">
+
+            <input class="desc-input year" type="text" placeholder="YY" required minlength="2" maxlength="2">
           </div>
           <div class="code-security">
             <p class="code-cvc">CVC</p>
-            <input class="desc-input cvc" type="text" placeholder="e.g 123">
+            <input class="desc-input cvc" type="text" placeholder="e.g 123" required maxlength="3">
+
           </div>
         </div>
         <div class="btn">
