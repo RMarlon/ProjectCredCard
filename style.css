@@ -18,6 +18,7 @@
     --text-color: hsl(0, 0%, 100%);
     --text-color-one: hsl(279, 6%, 55%);
     --text-color-two: hsl(278, 68%, 11%);
+    --text-color-three: hsl(278, 94%, 30%);
     /* -------------------------------------- */
     --border-color: hsl(249, 99%, 64%);
     --border-color-one: hsl(270, 3%, 87%);
@@ -126,6 +127,28 @@ input {
     align-items: center;
 }
 
+.image-complete {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finish{
+    margin: 20px 0;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-color-two);
+}
+
+.datails{
+    font-size: 18px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    color: var(--text-color-one);
+}
+
 .full-name, .full-number--card, .day-month, .code-cvc {
     font-size: 18px;
     margin-top: 24px;
@@ -140,8 +163,8 @@ input {
 .desc-input {
     width: 400px;
     padding: 15px;
-    margin-top: 5px;
     outline: none;
+    margin-top: 5px;
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 10px;
@@ -150,13 +173,13 @@ input {
     border: 1px solid var(--border-color-one);
 }
 
-.desc-input:hover{
+.desc-input:hover {
     border: 1px solid var(--border-color);
 }
 
 .info-month-year {
     display: flex;
-    align-items: center;
+    margin-top: 15px;
     justify-content: space-between;
 }
 
@@ -164,20 +187,20 @@ input {
     width: 100px;
 }
 
-.code-security{
+.code-security {
     display: flex;
     flex-direction: column;
 }
 
-.cvc{
+.cvc {
     width: 160px;
 }
 
-.btn{
+.btn {
     width: 400px;
     display: flex;
     padding: 15px;
-    margin: 40px 0;
+    margin: 20px 0;
     cursor: pointer;
     border-radius: 10px;
     align-items: center;
@@ -185,6 +208,6 @@ input {
     background-color: var(--background-color-two);
 }
 
-.btn-confirm{
+.btn-confirm {
     color: var(--text-color);
 }

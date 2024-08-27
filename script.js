@@ -15,6 +15,10 @@ const yearCard = document.querySelector('.card--year', (element)=>{
     element.innerHTML = `${'inputYear'}`;
 });
 
+const cvcCard = document.querySelector('.number--cvc', (element)=>{
+    element.innerHTML = `${inputCVC}`;
+});
+
 //eventos
 const inputName = document.querySelector('.name');
 inputName.addEventListener('input', (event)=>{
@@ -65,5 +69,21 @@ inputYear.addEventListener('input', (event)=>{
         errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
         inputYear.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
         inputYear.after(errorElement);
+    }
+});
+
+const inputCVC = document.querySelector('.cvc');
+inputCVC.addEventListener('input', (event)=>{
+    cvcCard.innerHTML = `${event.target.value}`;
+
+    if(event.target.value === ''){
+        cvcCard.innerHTML = `${'000'}`;
+
+        errorElement.innerHTML = `${"Can't be blank"}`;
+        errorElement.style.display = `${'block'}`;
+        errorElement.style.marginTop = `${'10px'}`;
+        errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
+        inputCVC.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
+        inputCVC.after(errorElement);
     }
 });
