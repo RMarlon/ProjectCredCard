@@ -51,31 +51,32 @@
         <img src="/images/icon-complete.svg" alt="image complete">
         <h1 class="finish">Tank You!</h1>
         <p class="datails">We've added your card details</p>
-        <div class="btn">
+        <div class="btn" onclick="btnClicked()">
           <a class="btn-confirm" href="">Continue</a>
         </div>
       </div>
       <main class="right-container--main">
         <p class="full-name">Cardholder Name</p>
-        <input class="desc-input name" type="text" placeholder="e.g. Jane Appleseed" required minlength="3">
+        <input class="desc-input name" type="text" placeholder="e.g. Jane Appleseed" minlength="3" required>
 
         <p class="full-number--card">Card Number</p>
-        <input class="desc-input number" type="text" placeholder="e.g. 1234567891230000" required maxlength="19">
+        <input class="desc-input number" type="text" placeholder="e.g. 1234567891230000" maxlength="19" required>
         <div class="info-month-year">
           <div class="month-date">
             <p class="day-month">Exp. Date (MM/YY)</p>
-            <input class="desc-input month" type="text" placeholder="MM" required minlength="2" maxlength="2">
+            <input class="desc-input month" type="text" placeholder="MM" minlength="2" maxlength="2" required>
 
-            <input class="desc-input year" type="text" placeholder="YY" required minlength="2" maxlength="2">
+            <input class="desc-input year" type="text" placeholder="YY"  minlength="2" maxlength="2" required>
           </div>
           <div class="code-security">
             <p class="code-cvc">CVC</p>
-            <input class="desc-input cvc" type="text" placeholder="e.g 123" required maxlength="3">
+            <input class="desc-input cvc" type="text" placeholder="e.g 123" maxlength="3" required>
 
           </div>
         </div>
-        <div class="btn">
-          <a class="btn-confirm" href="">Confirm</a>
+
+        <div class="btn" onclick="btnClick()">
+          <a class="btn-confirm" href="#">Confirm</a>
         </div>
       </main>
     </div>
