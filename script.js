@@ -50,6 +50,8 @@ function btnClicked() {
 const inputName = document.querySelector('.name');
 inputName.addEventListener('input', (event) => {
 
+    const regexNama = '^([A-z\s]{1,})$';
+
     nameCard.innerHTML = `${event.target.value}`;
     if (event.target.value === '') {
         nameCard.innerHTML = `${'Jane Appleseed'}`;
@@ -61,6 +63,8 @@ inputName.addEventListener('input', (event) => {
 const inputNumber = document.querySelector('.number');
 inputNumber.addEventListener('input', (event) => {
     numberCard.innerHTML = `${event.target.value}`;
+
+    const regexNumber = '^([0-9]{4})\s([0-9]{4})\s([0-9]{4})\s([0-9]{4})$';
 
     if (event.target.value === '') {
         numberCard.innerHTML = `${'0000 0000 0000 0000'}`;
@@ -78,6 +82,8 @@ const inputMonth = document.querySelector('.month');
 inputMonth.addEventListener('input', (event) => {
     monthCard.innerHTML = `${event.target.value}`;
 
+    const regexMonth = '^([0-9]{2})$';
+
     if (event.target.value === '') {
         monthCard.innerHTML = `${'00'}`;
     }
@@ -86,6 +92,8 @@ inputMonth.addEventListener('input', (event) => {
 const inputYear = document.querySelector('.year');
 inputYear.addEventListener('input', (event) => {
     yearCard.innerHTML = `${event.target.value}`;
+
+    const regexYear = '^([0-9]{2})$';
 
     if (event.target.value === '') {
         yearCard.innerHTML = `${'00'}`;
@@ -103,6 +111,8 @@ const inputCVC = document.querySelector('.cvc');
 inputCVC.addEventListener('input', (event) => {
     cvcCard.innerHTML = `${event.target.value}`;
 
+    const regexCVC = '^([0-9]{3})$';
+    
     if (event.target.value === '') {
         cvcCard.innerHTML = `${'000'}`;
 
