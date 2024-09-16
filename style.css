@@ -44,6 +44,7 @@ input {
     width: 1600px;
     height: 800px;
     align-items: center;
+    justify-content: center;
     background: url(/images/bg-main-desktop.png)no-repeat;
 }
 
@@ -57,8 +58,8 @@ input {
 
 .image-card-front {
     flex: 290px;
-    width: 500px;
     height: 400px;
+    width: 500px;
     background: url(/images/bg-card-front.png)no-repeat;
 }
 
@@ -134,7 +135,7 @@ input {
     justify-content: center;
 }
 
-.finish{
+.finish {
     margin: 20px 0;
     font-size: 40px;
     letter-spacing: 2px;
@@ -142,7 +143,7 @@ input {
     color: var(--text-color-two);
 }
 
-.datails{
+.datails {
     font-size: 18px;
     margin-bottom: 40px;
     letter-spacing: 2px;
@@ -212,16 +213,69 @@ input {
     color: var(--text-color);
 }
 
-/* @media(min-width:1020px){
-    .container{
+@media(max-width:1906px) {
+    .container {
+        height: 100vh;
         margin-top: -50px;
     }
+}
 
-    .container-left{
-        margin-top: -90px;
+@media (max-width:1174px) {
+    .container {}
+
+    .container-left {
+        /* margin-top: 55%; */
     }
 
-    .container-right{
-        margin-top: -100px;
+    .image-card-front{
+        flex: 240px;
     }
-} */
+    
+    .image-card-front, .image-card-back {
+        background-size: 400px;
+    }
+
+    .number--card {
+        font-size: 30px;
+        margin-top: -30px;
+        margin-left: 20px;
+    }
+
+    .name--card {
+        margin-left: 20px;
+    }
+
+
+    .vality--info {
+        margin-right: 110px;
+    }
+
+    .number--cvc {
+        margin-top: 100px;
+        margin-right: 35px;
+    }
+
+    .container-right {
+        /* margin-top: 30%; */
+    }
+
+    .day-month, .full-name, .full-number--card{
+        font-size: 16px;
+    }
+
+    .desc-input{
+        width: 350px;
+    }
+
+    .month, .year{
+        width: 70px;
+    }
+
+    .cvc{
+        width: 140px;
+    }
+
+    .btn{
+        width: 350px;
+    }
+}

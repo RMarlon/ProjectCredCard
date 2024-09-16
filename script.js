@@ -3,7 +3,7 @@ const errorElement = document.createElement('small');
 const imageContinue = document.querySelector('.image-complete');
 const imageConfirm = document.querySelector('.right-container--main');
 const regexNumber = /^([0-9]{4})\s([0-9]{4})\s([0-9]{4})\s([0-9]{4})$/;
-const regexName = /^([A-z\s]{1,})$/;
+const regexName = /^([A-z\s]{3,})$/;
 const regexMonthYear = /^([0-9]{2})$/;
 const regexCVC = /^([0-9]{3})$/;
 
@@ -28,53 +28,58 @@ const cvcCard = document.querySelector('.number--cvc', (element) => {
 
 //functions
 
-function btnClick(paramet) {
-    if (inputNumber.value || inputMonth.value || inputYear.value || inputCVC.value !== '') {
+function btnClick() {
+
+    if (regexName.test([inputName.value])) {
         imageConfirm.style.display = `${'none'}`;
         imageContinue.style.display = `${'flex'}`;
     }
-
-    if (inputName.value || inputNumber.value || inputMonth.value ||
-        inputYear.value || inputCVC.value === '') {
-
-        errorElement.style.display = `${'block'}`;
-        errorElement.style.marginTop = `${'10px'}`;
-        errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
-        inputNumber.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
-        inputCVC.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
-        inputYear.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
-
-    }
-
-    if (inputName.value.length < 3) {
-        errorElement.innerHTML = `${'You name requeris three Caractere'}`;
+    else {
+        errorElement.innerHTML = `${'Enter First name and last name'}`;
         errorElement.style.display = `${'block'}`;
         errorElement.style.marginTop = `${'10px'}`;
         errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
         inputName.after(errorElement);
     }
-    else {
-        errorElement.style.display = `${'none'}`;
-        inputName.style.borderColor = `${'hsl(279, 6%, 55%)'}`;
-    }
 
-    if (inputNumber.value.length < 19) {
+    if (regexNumber.test([inputNumber.value])) {
+        imageConfirm.style.display = `${'none'}`;
+        imageContinue.style.display = `${'flex'}`;
+    }
+    else {
         errorElement.innerHTML = `${'Wrong format, numbers only'}`;
         errorElement.style.display = `${'block'}`;
         errorElement.style.marginTop = `${'10px'}`;
         errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
+        inputNumber.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
         inputNumber.after(errorElement);
     }
+
+    if (regexMonthYear.test([inputMonth.value]) && regexMonthYear.test([inputYear.value])) {
+        imageConfirm.style.display = `${'none'}`;
+        imageContinue.style.display = `${'flex'}`;
+    }
     else {
-        errorElement.style.display = `${'none'}`;
-        inputNumber.style.borderColor = `${'hsl(279, 6%, 55%)'}`;
+        errorElement.innerHTML = `${"Can't be blank"}`;
+        errorElement.style.display = `${'block'}`;
+        errorElement.style.marginTop = `${'10px'}`;
+        errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
+        inputYear.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
+        inputYear.after(errorElement);
     }
 
-
-    // if (inputYear.value.length < 2) {
-    //     errorElement.innerHTML = `${"Can't be blank"}`;
-    //     inputYear.after(errorElement);
-    // }
+    if (regexCVC.test([inputCVC.value])) {
+        imageConfirm.style.display = `${'none'}`;
+        imageContinue.style.display = `${'flex'}`;
+    }
+    else {
+        errorElement.innerHTML = `${"Can't be blank"}`;
+        errorElement.style.display = `${'block'}`;
+        errorElement.style.marginTop = `${'10px'}`;
+        errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
+        inputCVC.style.borderColor = `${'hsl(0, 100%, 66%)'}`;
+        inputCVC.after(errorElement);
+    }
 }
 
 function btnClicked() {
@@ -86,10 +91,10 @@ const inputName = document.querySelector('.name');
 inputName.addEventListener('input', (event) => {
     nameCard.innerHTML = `${event.target.value}`;
 
-    if (!regexName.test([event.target.value]) || event.target.value === '' ) {
+    if (!regexName.test([event.target.value]) || event.target.value === '') {
         nameCard.innerHTML = `${'Jane Appleseed'}`;
 
-        errorElement.innerHTML = `${'Enter First name and lastname'}`;
+        errorElement.innerHTML = `${'Enter First name and last name'}`;
         errorElement.style.display = `${'block'}`;
         errorElement.style.marginTop = `${'10px'}`;
         errorElement.style.color = `${'hsl(0, 100%, 66%)'}`;
