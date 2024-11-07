@@ -215,28 +215,26 @@ input {
 
 @media(max-width:1906px) {
     .container {
+        width: 100%;
         height: 100vh;
         margin-top: -50px;
     }
 }
 
 @media (max-width:1174px) {
-    .container {}
-
-    .container-left {
-        /* margin-top: 55%; */
+    .container {
+        background-position: -90px;
     }
-
     .image-card-front{
         flex: 240px;
     }
     
     .image-card-front, .image-card-back {
-        background-size: 400px;
+        background-size: 350px;
     }
 
     .number--card {
-        font-size: 30px;
+        font-size: 25px;
         margin-top: -30px;
         margin-left: 20px;
     }
@@ -247,20 +245,16 @@ input {
 
 
     .vality--info {
-        margin-right: 110px;
+        margin-right: 160px;
     }
 
     .number--cvc {
-        margin-top: 100px;
-        margin-right: 35px;
-    }
-
-    .container-right {
-        /* margin-top: 30%; */
+        margin-top: 85px;
+        margin-right: 80px;
     }
 
     .day-month, .full-name, .full-number--card{
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .desc-input{
@@ -277,5 +271,43 @@ input {
 
     .btn{
         width: 350px;
+    }
+}
+
+@media(max-width:1074px){
+    .container{
+        
+        background: none;
+        flex-direction: column;
+        background-size:100% 35%;
+        background-repeat: no-repeat;
+        background-image: url(/images/bg-main-mobile.png);
+    }
+
+    .image-card-front{
+        bottom: 33%;
+        position: absolute;
+    }
+
+    .day-month, .full-name, .full-number--card{
+        font-size: 15px;
+    }
+
+    .month, .year{
+        width: 90px;
+    }
+
+    .container-left{
+        max-width: fit-content;
+    }
+
+    .container-right{
+        max-width: fit-content;
+    }
+}
+
+@media(max-width:756px){
+    .image-card-back{
+        margin-top: 20px;
     }
 }
