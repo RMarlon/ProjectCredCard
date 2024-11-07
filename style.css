@@ -45,7 +45,7 @@ input {
     height: 800px;
     align-items: center;
     justify-content: center;
-    background: url(./images/bg-main-desktop.png)no-repeat;
+    background: url(images/bg-main-desktop.png)no-repeat;
 }
 
 .container-left {
