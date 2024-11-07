@@ -60,14 +60,14 @@ input {
     flex: 290px;
     height: 400px;
     width: 500px;
-    background: url(/images/bg-card-front.png)no-repeat;
+    background: url(images/bg-card-front.png)no-repeat;
 }
 
 .image-logo {
     width: 90px;
     height: 90px;
     margin: 30px 20px;
-    background: url(/images/card-logo.svg)no-repeat;
+    background: url(images/card-logo.svg)no-repeat;
 }
 
 
@@ -106,7 +106,7 @@ input {
     width: 500px;
     height: 400px;
     margin-left: 100px;
-    background: url(/images/bg-card-back.png)no-repeat;
+    background: url(images/bg-card-back.png)no-repeat;
 }
 
 .info--cvc {
@@ -281,7 +281,7 @@ input {
         flex-direction: column;
         background-size:100% 35%;
         background-repeat: no-repeat;
-        background-image: url(/images/bg-main-mobile.png);
+        background-image: url(images/bg-main-mobile.png);
     }
 
     .image-card-front{
